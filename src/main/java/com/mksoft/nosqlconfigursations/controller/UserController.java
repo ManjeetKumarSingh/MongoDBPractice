@@ -17,7 +17,11 @@ public class UserController {
     }
     @GetMapping("/save")
     public String saveUser(){
-        User user = User.builder().userId(UUID.randomUUID().toString()).userEmail("manjeet@gmail.com").userName("Manjeet").build();
+        User user = User.builder()
+                .userId(UUID.randomUUID().toString())
+                .userEmail("manjeet@gmail.com")
+                .userName("Manjeet")
+                .build();
         return  userService.saveUser(user);
 
     }
